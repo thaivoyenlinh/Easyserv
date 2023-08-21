@@ -1,0 +1,40 @@
+@mixin textButton {
+  width: 87px;
+  height: 24px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: var(--blue_dark);
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+@mixin buttonStyle {
+  @include textButton();
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  gap: 8px;
+  position: absolute;
+  width: 125px;
+  height: 44px;
+  left: 998px;
+  top: 0px;
+  border: none;
+  background: linear-gradient(124.32deg, #31cb9e 0.01%, #0faaa2 100.02%);
+  border-radius: 32px;
+}
+
+@mixin textStyle($font-style, $font-weight, $font-size, $line-height) {
+  font-style: $font-style;
+  font-weight: $font-weight;
+  font-size: $font-size + px;
+  line-height: $line-height + px;
+}
